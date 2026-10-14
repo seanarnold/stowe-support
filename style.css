@@ -1,0 +1,43 @@
+:root {
+  --bg: #ecede8;
+  --ink: #17191b;
+  --accent: #f2be22;
+  --card: #ffffff;
+  --border: #d3d5cf;
+  --secondary: #555a5e;
+  --divider: #e4e5e0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17191b;
+    --ink: #ecede8;
+    --card: #222527;
+    --border: #3a3e41;
+    --secondary: #a3a8ab;
+    --divider: #2e3234;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 "IBM Plex Sans", -apple-system, system-ui, sans-serif;
+}
+main { max-width: 680px; margin: 0 auto; padding: 32px 20px 64px; }
+header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
+.brand { font: 700 40px/1 "Barlow Condensed", Impact, sans-serif; letter-spacing: .5px; color: var(--ink); text-decoration: none; text-transform: uppercase; }
+nav a { color: var(--ink); font-weight: 600; margin-left: 20px; text-decoration: none; border-bottom: 2px solid transparent; }
+nav a:hover, nav a[aria-current] { border-bottom-color: var(--accent); }
+h1 { font: 700 44px/1.05 "Barlow Condensed", Impact, sans-serif; text-transform: uppercase; margin: 0 0 12px; }
+h2 { font: 600 24px/1.2 "Barlow Condensed", Impact, sans-serif; margin: 40px 0 8px; }
+p, li { color: var(--ink); }
+.lede { color: var(--secondary); font-size: 19px; margin: 0 0 24px; }
+.card { background: var(--card); border: 1.5px solid var(--border); border-radius: 14px; padding: 18px 20px; margin: 16px 0; }
+.card h3 { margin: 0 0 4px; font-size: 17px; }
+.card p { margin: 0; color: var(--secondary); }
+.badge { display: inline-block; background: var(--accent); color: #17191b; font: 700 22px/1 "Barlow Condensed", Impact, sans-serif; padding: 4px 9px 3px; border-radius: 6px; }
+.button { display: inline-block; background: var(--accent); color: #17191b; font-weight: 600; padding: 12px 20px; border-radius: 14px; text-decoration: none; }
+a { color: var(--ink); text-underline-offset: 3px; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+.button { text-decoration: none; }
+footer { margin-top: 48px; padding-top: 20px; border-top: 1.5px solid var(--divider); color: var(--secondary); font-size: 14px; }
